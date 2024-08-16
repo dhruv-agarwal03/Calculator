@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Example of HTML</title>
+<script>
+
+function f1()
+{
+	console.log("hello");
+	document.getElementById("t1").value=eval(document.getElementById("t1").value);
+}
+function f2(b)
+{
+	
+	document.getElementById("t1").value+=b.value;
+	
+}
+function f3(b)
+{
+
+	document.getElementById("t1").value="";
+}
+function f4(b,t)
+{	
+	switch(t){
+		case 1:
+			document.getElementById("t1").value=Math.sin(document.getElementById("t1").value*Math.PI/180);
+			break;
+		case 2:
+			document.getElementById("t1").value=Math.cos(document.getElementById("t1").value*Math.PI/180);
+			break;
+		case 3:
+			document.getElementById("t1").value=Math.tan(document.getElementById("t1").value*Math.PI/180);
+			break;
+		case 4:
+			document.getElementById("t1").value=Math.log(document.getElementById("t1").value*Math.PI/180);
+			break;
+		case 5:
+			document.getElementById("t1").value=Math.ln(document.getElementById("t1").value*Math.PI/180);
+			break;
+		case 6:
+			document.getElementById("t1").value=1/(document.getElementById("t1").value);
+			break;
+
+		case 7:
+			document.getElementById("t1").value=Math.sqrt(document.getElementById("t1").value);
+			break;
+	}
+}
+
+</script>
+</head>
+<body>
+<br/><br/><br/><br/><br/><br/><br/>
+	<table align="center">
+		<tr>
+			<td colspan="7"><input type="text" id="t1" style="width:555px;height:35px;font-size:30px;text-align:right" /></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Sin" style="width:70px;height:60px" onClick="f4(this,1)"/></td>
+			<td><input type="button" value="Log" style="width:70px;height:60px" / onClick="f4(this,4)"></td>
+			<td><input type="button" value="1" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="2" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="3" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="C" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="AC" style="width:70px;height:60px" / onClick="f3()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Cos" style="width:70px;height:60px"  onClick="f4(this,2)"/></td>
+			<td><input type="button" value="ln" style="width:70px;height:60px" onClick="f4(this,5)"/ ></td>
+			<td><input type="button" value="4" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="5" style="width:70px;height:60px" /onClick="f2(this)"></td>
+			<td><input type="button" value="6" style="width:70px;height:60px" /onClick="f2(this)"></td>
+			<td><input type="button" value="+" style="width:70px;height:60px" /onClick="f2(this)"></td>
+			<td><input type="button" value="-" style="width:70px;height:60px" / onClick="f2(this)"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Tan" style="width:70px;height:60px" onClick="f4(this,3)"/></td>
+			<td><input type="button" value="1/x" style="width:70px;height:60px" onClick="f4(this,6)"/></td>
+			<td><input type="button" value="7" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="8" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="9" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="*" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="/" style="width:70px;height:60px" / onClick="f2(this)"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="ABC" style="width:70px;height:60px" /></td>
+			<td><input type="button" value="Sqrt" style="width:70px;height:60px" onClick="f4(this,7)"/></td>
+			<td><input type="button" value="+/-" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="." style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td><input type="button" value="0" style="width:70px;height:60px" / onClick="f2(this)"></td>
+			<td colspan="2"><input type="button" value="=" style="width:150px;height:60px" onClick="f1()"/></td>
+		</tr>
+	</table>
+</body>
+</html>
